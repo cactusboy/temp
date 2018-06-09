@@ -5,6 +5,7 @@
 <head>
     <title>跬步郎的博客</title>
     <!-- meta -->
+    <meta name="baidu_union_verify" content="2928055b414f3cdb54329bc0ecf48875">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -113,9 +114,7 @@
                             <li>
                                 <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a>
                             </li>
-                            {% empty %}
-                            暂无标签！
-                            {% endfor %}
+                            {% empty %} 暂无标签！ {% endfor %}
                         </ul>
                     </div>
                     <!--
@@ -178,7 +177,7 @@
                     </div>
                 </div>
             </div>
-    </footer>
+        </footer>
     </div>
     <!-- Mobile Menu 
     <div class="overlay overlay-hugeinc">
