@@ -1,0 +1,24 @@
+server {
+    charset utf-8;
+    listen 80;
+    server_name 39.107.80.105;	
+    server_name www.ssper.com.cn;       
+  
+
+    location / { 
+        proxy_set_header Host $host;
+        proxy_pass http://127.0.0.1:8080;
+    }
+
+    location /static {
+        alias /sites/cactusboy.net/myblog02/static;
+    }
+
+    location /sitemap.xml {
+        alias /sites/cactusboy.net/myblog02/sitemap.xml;
+    }
+	
+    location /media {
+	alias /sites/cactusboy.net/myblog02/media;
+    }
+}
